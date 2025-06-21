@@ -26,7 +26,7 @@ for (var key of dic.keys()) {
 
 
 const img = document.getElementById("step")
-const pre = "https://github.com/kei-morisue/PD-Gallery/blob/master/"
+const pre = "https://github.com/kei-morisue/PD-Gallery/blob/master/pd/"
 const mod = sel.value
 page.max = dic.get(mod).length
 max.innerHTML = page.max
