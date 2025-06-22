@@ -1,45 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Photo Diagram Gallery</title>
     <link rel="icon" href="./icon-512x512.png">
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: darkgray;
+            margin: 0;
+            font-family: sans-serif;
+            color: #222;
+        }
 
+        header {
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .control #op {
+            margin-bottom: 0.5rem;
+        }
+
+        .control li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .file_area {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            display: block;
+            margin-top: 0.2rem;
+        }
+    </style>
 </head>
 
-<body style="background:darkgray">
-    <div>
-        <span style="font-family:sans-serif">
-            <b>Photo Diagram Gallery&nbsp;&nbsp;</b>
-        </span>
-    </div>
+<body>
+    <header>
+        Photo Diagram Gallery
+    </header>
 
-    <div id="control" class="control">
-        <div id="op">
-            <select id="model"></select>
+    <main>
+        <div id="control" class="control">
+            <div id="op">
+                <select id="model"></select>
+            </div>
+            <li>
+                <input id="page" type="number" min="1" value="1">
+                <p>/</p>
+                <p id="max">0</p>
+                <button id="top">&uparrow;</button>
+                <button id="backk">&leftleftarrows;</button>
+                <button id="back">&leftarrow;</button>
+                <button id="fow">&rightarrow;</button>
+                <button id="foww">&rightrightarrows;</button>
+                <button id="bottom">&downarrow;</button>
+            </li>
         </div>
-        <li>
-            <input id="page" type="number" min="1" value="1">
-            <p>/</p>
-            <p id="max">0</p>
-            <button id="top">&uparrow;</button>
-            <button id="backk">&leftleftarrows;</button>
-            <button id="back">&leftarrow;</button>
-            <button id="fow">&rightarrow;</button>
-            <button id="foww">&rightrightarrows;</button>
-            <button id="bottom">&downarrow;</button>
 
-        </li>
-    </div>
+        <div id="file_area" class="file_area">
+            <img src="" id="step" alt="Diagram Step">
+        </div>
+    </main>
 
-    <div id="file_area" class="file_area">
-        <img src="" id="step">
-    </div>
-    <a href="./README.md">README</a>
-    <div>© Kei Morisue 2025 </div>
-    <a href="https://github.com/kei-morisue/PD-Gallery">Repository</a>
+    <footer>
+        <a href="./README.md">README</a>
+        © Kei Morisue 2025<br>
+        <a href="https://github.com/kei-morisue/PD-Gallery">Repository</a>
+    </footer>
+
     <script type="module" src="./src/main.js"></script>
 </body>
 
